@@ -1,5 +1,5 @@
 // Constante para a URL base da API
-const BASE_URL = 'http://localhost:3000';
+const BASE_URL = 'https://getask-backend.onrender.com';
 
 // Função para gerar uma hash aleatória
 function generateHash() {
