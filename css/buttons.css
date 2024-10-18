@@ -1,0 +1,51 @@
+.btn {
+    background-color: #FFEB3B;
+    /* Amarelo */
+    color: #003366;
+    /* Azul escuro */
+    padding: 15px 30px;
+    /* Tamanho do botão */
+    text-decoration: none;
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    font-size: 16px;
+    /* Tamanho da fonte */
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    border: none;
+    /* Remove borda padrão */
+}
+
+.btn:hover {
+    background-color: #FBC02D;
+    /* Amarelo mais escuro */
+    transform: translateY(-3px);
+}
+
+/* Estilo do botão de fechar */
+.close-btn {
+    background-color: red;
+    /* Vermelho */
+    color: #FFFFFF;
+    /* Branco */
+    padding: 15px 30px;
+    /* Mesma altura dos outros botões */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    font-size: 16px;
+    /* Tamanho da fonte */
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    /* Remove borda padrão */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.close-btn:hover {
+    background-color: darkred;
+    /* Tom mais escuro de vermelho no hover */
+    transform: translateY(-3px);
+    /* Efeito de elevação no hover */
+}

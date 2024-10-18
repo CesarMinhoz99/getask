@@ -1,0 +1,108 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getask - Conecte-se com Oportunidades</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/cards.css"> <!-- Novo CSS para cartões -->
+    <script src="js/script.js" defer=""></script>
+    <script src="js/animation.js" defer=""></script>
+    <script type="text/javascript" src="js/cidades-estados-1.4-utf8.js"></script>
+
+
+</head>
+
+<body>
+    <nav>
+        <a href="#procurar" id="procurar-btn" class="btn">Procurar Trabalho</a>
+        <a href="#criar" id="criar-btn" class="btn">Criar Trabalho</a>
+        <a href="#editar" id="editar-btn" class="btn">Editar Trabalho</a>
+    </nav>
+    <div class="container" id="welcome-message">
+        <h1>Bem-vindo ao Getask</h1>
+        <p>Conecte-se rapidamente com as melhores oportunidades de trabalho.</p>
+    </div>
+    <div class="job-list hidden" id="job-list">
+        <div class="cards-container">
+
+        </div>
+    </div>
+
+
+    <div id="search-form" class="hidden form-container">
+        <select id="estado" class="input-field"></select>
+        <select id="cidade" class="input-field"></select>
+        <script type="text/javascript">
+            new dgCidadesEstados({
+                estado: document.getElementById('estado'),
+                cidade: document.getElementById('cidade')
+            });
+        </script>
+        <div class="button-group">
+            <button id="close-button-search" class="close-btn">Fechar</button>
+            <button id="search-button" class="btn small">Buscar</button>
+        </div>
+    </div>
+
+    <div id="create-job-form" class="hidden form-container">
+        <input type="text" placeholder="Nome da Empresa" id="company-name" class="input-field">
+        <input type="text" placeholder="Nome da Vaga" id="job-name" class="input-field">
+        <select id="create-estado" class="input-field"></select>
+        <select id="create-cidade" class="input-field"></select>
+        <script type="text/javascript">
+            new dgCidadesEstados({
+                estado: document.getElementById('create-estado'),
+                cidade: document.getElementById('create-cidade')
+            });
+        </script>
+
+        <textarea placeholder="Descrição" id="description" class="input-field"></textarea>
+        <input type="text" placeholder="Valor a ser pago" id="valor" class="input-field">
+        <input type="text" placeholder="Contato (Whatsapp ou Email)" id="contato" class="input-field">
+        <input type="text" placeholder="Hash" id="hash" class="input-field" readonly="">
+        <p>Essa senha não deve ser compartilhada pois será usada caso você queira editar o trabalho criado.</p>
+        <div class="button-group">
+            <button id="close-button-create" class="close-btn">Fechar</button>
+            <button id="create-job-button" class="btn">Criar Vaga</button>
+        </div>
+    </div>
+
+
+    <div id="edit-job-form" class="hidden form-container">
+        <input type="text" placeholder="Hash" id="edit-hash" class="input-field">
+        <div class="button-group">
+            <button id="close-button-edit" class="close-btn">Fechar</button>
+            <button id="search-job-button" class="btn">Buscar Vaga</button> <!-- Renomeado -->
+        </div>
+    </div>
+
+    <div id="post-edit-job-form" class="hidden form-container">
+        <input type="text" placeholder="Nome da Empresa" id="edit-company-name" class="input-field">
+        <input type="text" placeholder="Nome da Vaga" id="edit-job-name" class="input-field">
+        <select id="edit-create-estado" class="input-field"></select>
+        <select id="edit-create-cidade" class="input-field"></select>
+        <script type="text/javascript">
+            new dgCidadesEstados({
+                estado: document.getElementById('edit-create-estado'),
+                cidade: document.getElementById('edit-create-cidade')
+            });
+        </script>
+        <textarea placeholder="Descrição" id="edit-description" class="input-field"></textarea>
+        <input type="text" placeholder="Valor a ser pago" id="edit-valor" class="input-field">
+        <input type="text" placeholder="Contato (Whatsapp ou Email)" id="edit-contato" class="input-field">
+
+        <p>Essa senha não deve ser compartilhada pois será usada caso você queira editar o trabalho criado.</p>
+        <div class="button-group">
+            <button id="close-button-create" class="close-btn">Fechar</button>
+            <button id="edit-del-job-button" class="btn">Excluir vaga</button>
+            <button id="edit-save-job-button" class="btn">Salvar Edição</button>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

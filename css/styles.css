@@ -1,0 +1,77 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+nav {
+    background-color: #000000;
+    /* Preto */
+    padding: 20px;
+    display: flex;
+    /* Flexbox para alinhamento dos botões */
+    justify-content: center;
+    /* Centraliza os botões */
+    align-items: center;
+    /* Alinha verticalmente */
+    gap: 10px;
+    /* Espaçamento entre os botões */
+    flex-wrap: nowrap;
+    /* Impede que os botões se movam para a linha de baixo */
+    overflow-x: auto;
+    /* Adiciona rolagem horizontal se necessário */
+}
+
+.container {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+h1 {
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Outros estilos existentes */
+
+.container {
+    transition: opacity 0.5s ease-out;
+    /* Transição suave para a opacidade */
+}
+
+.hidden {
+    opacity: 0;
+    /* Define a opacidade como 0 em vez de usar display: none */
+}
+
+
+/* Media Query para telas pequenas */
+@media (max-width: 768px) {
+    nav {
+        overflow-x: auto;
+        /* Adiciona rolagem horizontal se necessário */
+    }
+
+    .container {
+        padding: 50px 10px;
+        /* Ajusta o padding para mobile */
+    }
+
+    h1 {
+        font-size: 28px;
+        /* Reduz o tamanho do título em mobile */
+    }
+
+    p {
+        font-size: 16px;
+        /* Reduz o tamanho do texto em mobile */
+    }
+}

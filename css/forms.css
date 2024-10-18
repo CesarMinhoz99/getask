@@ -1,0 +1,44 @@
+.form-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 300px;
+    /* Definindo uma largura fixa para a div do formulário */
+}
+
+.form-container.hidden {
+    display: none;
+    /* Esconde o formulário quando a classe 'hidden' está presente */
+}
+
+.input-field {
+    padding: 10px;
+    margin-bottom: 10px;
+    /* Espaçamento abaixo do campo de entrada */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 20px);
+    /* Largura quase total da div, subtraindo o preenchimento */
+}
+
+.input-field:focus {
+    border-color: #FFEB3B;
+    /* Amarelo para foco */
+    outline: none;
+    /* Remove a borda padrão do foco */
+}
+
+.warning {
+    color: red;
+    /* Cor do texto do aviso */
+    font-size: 14px;
+    /* Tamanho da fonte */
+    margin-top: 10px;
+    /* Espaçamento acima do aviso */
+}

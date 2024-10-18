@@ -1,0 +1,37 @@
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que os cartões se movam para a próxima linha */
+    justify-content: center;
+    /* Centraliza os cartões no contêiner */
+    padding: 0 10px;
+    /* Adiciona um espaçamento horizontal ao contêiner */
+}
+
+.job-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 10px;
+    /* Margem uniforme entre os cartões */
+    width: calc(25% - 20px);
+    /* Cada cartão ocupa 25% da largura menos a margem */
+    transition: transform 0.2s;
+    /* Animação ao passar o mouse */
+}
+
+/* Responsivo: cartões em dispositivos menores */
+@media (max-width: 768px) {
+    .job-card {
+        width: calc(50% - 20px);
+        /* Em telas menores, dois cartões por linha */
+    }
+}
+
+@media (max-width: 480px) {
+    .job-card {
+        width: calc(100% - 20px);
+        /* Em telas muito pequenas, um cartão por linha */
+    }
+}
